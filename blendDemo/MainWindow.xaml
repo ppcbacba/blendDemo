@@ -7,10 +7,6 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525" d:DataContext="{d:DesignData /SampleData/SampleDataSource/SampleDataSource.xaml}">
     <Window.Resources>
-        <Style x:Key="TextBlockStyle1" TargetType="{x:Type TextBlock}">
-            <Setter Property="FontFamily" Value="SimHei"/>
-            <Setter Property="FontSize" Value="22"/>
-        </Style>
         <DataTemplate x:Key="DataTemplate1">
             <Grid>
                 <Grid.ColumnDefinitions>
@@ -27,7 +23,9 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <TextBlock x:Name="textBlock" Text="人员列表" Margin="10" Style="{DynamicResource TitleTextStyle}"/>
+        <Border Style="{DynamicResource TitleStyle}" Margin="0" >
+            <TextBlock x:Name="textBlock" Text="人员列表" Style="{DynamicResource TitleTextStyle}"/>
+        </Border>
         <ListBox x:Name="listBox" Grid.Row="1" ItemsSource="{Binding Persons}" ItemTemplate="{DynamicResource DataTemplate1}" HorizontalContentAlignment="Stretch" RenderTransformOrigin="0.465,0.482"/>
 
     </Grid>

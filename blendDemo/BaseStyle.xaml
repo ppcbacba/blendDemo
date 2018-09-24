@@ -13,5 +13,8 @@
         <Setter Property="FontFamily" Value="{DynamicResource CoreFontFamily}"/>
         <Setter Property="FontSize" Value="{DynamicResource CoreFontSize}"/>
     </Style>
+    <Style x:Key="TitleStyle" TargetType="{x:Type Border}">
+        <Setter Property="Background" Value="#FF817E7E"/>
+    </Style>
 
 </ResourceDictionary>

@@ -47,6 +47,10 @@ namespace Expression.Blend.SampleData.SampleDataSource
         }
     }
 
+    public class Persons : System.Collections.ObjectModel.ObservableCollection<PersonsItem>
+    { 
+    }
+
     public class PersonsItem : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
@@ -96,10 +100,25 @@ namespace Expression.Blend.SampleData.SampleDataSource
                 }
             }
         }
-    }
 
-    public class Persons : System.Collections.ObjectModel.ObservableCollection<PersonsItem>
-    { 
+        private string _Property1 = string.Empty;
+
+        public string Property1
+        {
+            get
+            {
+                return this._Property1;
+            }
+
+            set
+            {
+                if (this._Property1 != value)
+                {
+                    this._Property1 = value;
+                    this.OnPropertyChanged("Property1");
+                }
+            }
+        }
     }
 #endif
 }

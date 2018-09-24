@@ -5,15 +5,15 @@
 -->
 <SampleData:SampleDataSource xmlns:SampleData="clr-namespace:Expression.Blend.SampleData.SampleDataSource">
 	<SampleData:SampleDataSource.Persons>
-		<SampleData:PersonsItem Name="Class curae cras aenean" Sex="True"/>
-		<SampleData:PersonsItem Name="Mauris nam maecenas" Sex="False"/>
-		<SampleData:PersonsItem Name="Sed donec" Sex="True"/>
-		<SampleData:PersonsItem Name="Praesent duis" Sex="False"/>
-		<SampleData:PersonsItem Name="Nunc nullam amet" Sex="True"/>
-		<SampleData:PersonsItem Name="Aliquam accumsan" Sex="False"/>
-		<SampleData:PersonsItem Name="Ante dis est hac" Sex="True"/>
-		<SampleData:PersonsItem Name="Bibendum leo dictumst" Sex="False"/>
-		<SampleData:PersonsItem Name="Arcu etiam aptent" Sex="True"/>
-		<SampleData:PersonsItem Name="Mus auctor" Sex="False"/>
+		<SampleData:PersonsItem Name="Class curae cras aenean" Sex="True" Property1="Aliquam namddddsgd"/>
+		<SampleData:PersonsItem Name="Mauris nam maecenas" Sex="False" Property1="Class maecenas curae aenean"/>
+		<SampleData:PersonsItem Name="Sed donec" Sex="True" Property1="Cras sed dis dsafsatfsdvfasfasf"/>
+		<SampleData:PersonsItem Name="Praesent duis" Sex="False" Property1="Duis nunc"/>
+		<SampleData:PersonsItem Name="Nunc nullam amet" Sex="True" Property1="Praesent integer mauris quisque"/>
+		<SampleData:PersonsItem Name="Aliquam accumsan" Sex="False" Property1="Accumsan donec"/>
+		<SampleData:PersonsItem Name="Ante dis est hac" Sex="True" Property1="Vivamus etiam amet"/>
+		<SampleData:PersonsItem Name="Bibendum leo dictumst" Sex="False" Property1="Est nullam"/>
+		<SampleData:PersonsItem Name="Arcu etiam aptent" Sex="True" Property1="Aptent auctor"/>
+		<SampleData:PersonsItem Name="Mus auctor" Sex="False" Property1="Fusce congue"/>
 	</SampleData:SampleDataSource.Persons>
 </SampleData:SampleDataSource>

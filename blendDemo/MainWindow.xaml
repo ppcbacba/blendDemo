@@ -20,7 +20,7 @@
                             <ColumnDefinition Width="Auto"/>
                         </Grid.ColumnDefinitions>
                         <TextBlock x:Name="textBlock" TextWrapping="NoWrap" Text="{Binding Name}" Style="{DynamicResource CoreTextStyle}" TextTrimming="WordEllipsis" ToolTip="{Binding Name}"/>
-                        <CheckBox x:Name="checkBox" Content="男" Grid.Column="1" IsChecked="{Binding Sex}" Style="{DynamicResource CheckBoxBaseStyle}"/>
+                        <CheckBox x:Name="checkBox" Content="男" Grid.Column="1" IsChecked="{Binding Sex}" Style="{DynamicResource CheckBoxBaseStyle}" Template="{DynamicResource CheckBoxControlTemplate}"/>
                     </Grid>
                 </Border>
                 <TextBlock x:Name="textBlock1" Grid.Row="1" TextWrapping="Wrap" Text="{Binding Property1}"/>

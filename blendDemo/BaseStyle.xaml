@@ -16,5 +16,48 @@
     <Style x:Key="TitleStyle" TargetType="{x:Type Border}">
         <Setter Property="Background" Value="#FF817E7E"/>
     </Style>
+    <ControlTemplate x:Key="CheckBoxControlTemplate" TargetType="{x:Type CheckBox}">
+        <Grid>
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal"/>
+                    <VisualState x:Name="MouseOver">
+                        <Storyboard>
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="border1">
+                                <EasingDoubleKeyFrame KeyTime="0" Value="0.3"/>
+                            </DoubleAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Pressed">
+                        <Storyboard>
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="border">
+                                <EasingDoubleKeyFrame KeyTime="0" Value="0.1"/>
+                            </DoubleAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Disabled"/>
+                </VisualStateGroup>
+                <VisualStateGroup x:Name="CheckStates">
+                    <VisualState x:Name="Checked">
+                        <Storyboard>
+                            <StringAnimationUsingKeyFrames Storyboard.TargetProperty="(TextBlock.Text)" Storyboard.TargetName="textBlock">
+                                <DiscreteStringKeyFrame KeyTime="0" Value="女"/>
+                            </StringAnimationUsingKeyFrames>
+                            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="grid">
+                                <EasingColorKeyFrame KeyTime="0" Value="#FFEE0C35"/>
+                            </ColorAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Unchecked"/>
+                    <VisualState x:Name="Indeterminate"/>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+            <Grid x:Name="grid" Width="30" Background="#FF0A0AA4">
+                <TextBlock x:Name="textBlock" HorizontalAlignment="Center" TextWrapping="Wrap" Text="男" VerticalAlignment="Top"/>
+            </Grid>
+            <Border x:Name="border" HorizontalAlignment="Left" Height="18.25" VerticalAlignment="Top" Width="30" BorderBrush="Black" Background="Black" Opacity="0"/>
+            <Border x:Name="border1" HorizontalAlignment="Left" Height="18.25" VerticalAlignment="Top" Width="30" Background="#FFFFFEFE" Opacity="0"/>
+        </Grid>
+    </ControlTemplate>
 
 </ResourceDictionary>
